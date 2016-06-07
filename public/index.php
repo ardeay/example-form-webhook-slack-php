@@ -2,6 +2,10 @@
 
 require('../vendor/autoload.php');
 
+// Log errors (but don't display any publicly)
+error_reporting(-1);
+ini_set('display_errors', 0);
+
 // Load environment variables from .env if present
 if (file_exists('../.env')) {
     $dotenv = new Dotenv\Dotenv('../');
