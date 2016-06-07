@@ -3,8 +3,10 @@
 require('../vendor/autoload.php');
 
 // Load environment variables from .env if present
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+if (file_exists('../.env')) {
+    $dotenv = new Dotenv\Dotenv('../');
+    $dotenv->load();
+}
 
 // If there is not an incoming submission, output a messages to let us know that our service online
 if (empty($_POST)) {
