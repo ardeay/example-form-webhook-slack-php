@@ -77,3 +77,5 @@ $client
     ->attach($metadataAttachment)
     ->attach($dataAttachment)
     ->send($messageText);
+
+error_log('Message sent at ' . date('Y-m-d H:i:s') . ' (UTC)');
