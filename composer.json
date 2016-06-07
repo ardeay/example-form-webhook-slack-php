@@ -1,0 +1,13 @@
+{
+    "name": "zesty-io/example-form-webhook-slack-php",
+    "authors": [
+        {
+            "name": "Andy Fleming",
+            "email": "andy@zesty.io"
+        }
+    ],
+    "require": {
+        "maknz/slack": "^1.7",
+        "vlucas/phpdotenv": "^2.2"
+    }
+}

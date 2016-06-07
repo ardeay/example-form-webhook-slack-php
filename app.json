@@ -1,0 +1,16 @@
+{
+  "name": "Zesty Form Slack Notifier",
+  "description": "A sample PHP app for processing Zesty webhooks into Slack notifications",
+  "repository": "https://github.com/zesty-io/example-form-webhook-slack-php",
+  "keywords": ["zesty", "slack", "webhook"],
+  "env": {
+    "SLACK_WEBHOOK_URL": {
+      "description": "Your Slack URL for the Incoming Webhooks API ( see https://api.slack.com/incoming-webhooks )",
+      "value": "https://hooks.slack.com/services/THE_REST_OF_YOUR_SLACK_HOOK_URL_HERE"
+    },
+    "SLACK_CHANNEL": {
+      "description": "The channel you want your notification to appear in.",
+      "value": "#general"
+    }
+  }
+}
