@@ -35,7 +35,7 @@ $_POST['metadata']['icon'] = isset($_POST['metadata']['icon']) ? $_POST['metadat
 // We'll set up a Slack API client with our settings from our environment
 $client = new Maknz\Slack\Client(getenv('SLACK_WEBHOOK_URL'), [
     'username' => 'Lead Details',
-    'icon' => ':'..':',
+    'icon' => ':'.$_POST['metadata']['icon'].':',
     'channel' => getenv('SLACK_CHANNEL')
 ]);
 
