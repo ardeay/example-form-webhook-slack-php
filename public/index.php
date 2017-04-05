@@ -30,11 +30,12 @@ if (empty($_POST)) {
     echo 'Service online.';
     die();
 }
+$_POST['metadata']['icon'] = isset($_POST['metadata']['icon']) ? $_POST['metadata']['icon'] : 'moneybag';
 
 // We'll set up a Slack API client with our settings from our environment
 $client = new Maknz\Slack\Client(getenv('SLACK_WEBHOOK_URL'), [
     'username' => 'Lead Details',
-    'icon' => ':moneybag:',
+    'icon' => ':'..':',
     'channel' => getenv('SLACK_CHANNEL')
 ]);
 
