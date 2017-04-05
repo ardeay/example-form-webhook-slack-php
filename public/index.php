@@ -20,7 +20,7 @@ if (empty($_POST)) {
 
 // We'll set up a Slack API client with our settings from our environment
 $client = new Maknz\Slack\Client(getenv('SLACK_WEBHOOK_URL'), [
-    'username' => 'New Lead Captured',
+    'username' => 'Lead Details',
     'icon' => ':moneybag:',
     'channel' => getenv('SLACK_CHANNEL')
 ]);
@@ -37,7 +37,7 @@ $submittedOn = $submittedOn->format('l F j Y g:i:s A I');
 
 // We'll create a "metadata" attachment which will have the fields that describe our form submission
 $metadataAttachment = [
-    'color' => '#dddddd',
+    'color' => '#000000',
     'fields' => [
         [
             'title' => 'Submitted on',
@@ -70,7 +70,7 @@ if (isset($_POST['data']) && is_array($_POST['data']) && count($_POST['data']) >
 }
 
 // Lastly, before sending the message, we'll create actual messages text to go before the attachments.
-$messageText = 'A new form submission was received on ' . $_POST['metadata']['submitted_from_domain'] . '.';
+$messageText = 'A new lead opportunity from ' . $_POST['metadata']['submitted_from_domain'] . ' has appeared!';
 
 // Send the message
 $client
