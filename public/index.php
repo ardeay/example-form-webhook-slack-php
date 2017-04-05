@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 
 $allowedDomains = array('www.zesty.io', 'blog.zesty.io');
@@ -8,7 +9,7 @@ $referer = $_SERVER['HTTP_REFERER'];
 $domain = parse_url($referer); //If yes, parse referrer
 
 if(!in_array( $domain['host'], $allowedDomains)) {
-    echo "you are not allowed to post at this page";
+    echo "BTFO";
     //die(); //Stop running the script
 }
 
