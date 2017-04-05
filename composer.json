@@ -1,9 +1,9 @@
 {
-    "name": "zesty-io/example-form-webhook-slack-php",
+    "name": "ardeay/zesty-slack-webhook",
     "authors": [
         {
-            "name": "Andy Fleming",
-            "email": "andy@zesty.io"
+            "name": "Randy",
+            "email": "randy@zesty.io"
         }
     ],
     "require": {

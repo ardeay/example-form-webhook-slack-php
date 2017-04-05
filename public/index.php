@@ -20,8 +20,8 @@ if (empty($_POST)) {
 
 // We'll set up a Slack API client with our settings from our environment
 $client = new Maknz\Slack\Client(getenv('SLACK_WEBHOOK_URL'), [
-    'username' => 'Website Form Submission',
-    'icon' => ':memo:',
+    'username' => 'New Lead Captured',
+    'icon' => ':moneybag:',
     'channel' => getenv('SLACK_CHANNEL')
 ]);
 
