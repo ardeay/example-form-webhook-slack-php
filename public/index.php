@@ -1,5 +1,18 @@
 <?php
 
+
+$allowedDomains = array('www.zesty.io', 'blog.zesty.io');
+
+$referer = $_SERVER['HTTP_REFERER'];
+
+$domain = parse_url($referer); //If yes, parse referrer
+
+if(!in_array( $domain['host'], $allowedDomains)) {
+    echo "you are not allowed to post at this page";
+    die(); //Stop running the script
+}
+
+
 require('../vendor/autoload.php');
 
 // Log errors (but don't display any publicly)
