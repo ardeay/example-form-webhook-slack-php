@@ -9,7 +9,7 @@ $domain = parse_url($referer); //If yes, parse referrer
 
 if(!in_array( $domain['host'], $allowedDomains)) {
     echo "you are not allowed to post at this page";
-    die(); //Stop running the script
+    //die(); //Stop running the script
 }
 
 
