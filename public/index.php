@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 
-$allowedDomains = array('www.zesty.io', 'blog.zesty.io');
+$allowedDomains = array('www.zesty.io', 'blog.zesty.io', 'info.zesty.io');
 
 $referer = $_SERVER['HTTP_REFERER'];
 
